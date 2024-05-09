@@ -23,7 +23,7 @@
 				<key>filename</key>
 				<string>%NAME%.dmg</string>
 				<key>url</key>
-				<string>https://objects.githubusercontent.com/github-production-release-asset-2e65be/340468529/217a50e6-f25b-48fc-b9ba-a397572ec457?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240509%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20240509T090028Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=1943117c430d656c2587bc6a721ecee294520ba433ee61f56e36170a6a62f4e3&amp;X-Amz-SignedHeaders=host&amp;actor_id=0&amp;key_id=0&amp;repo_id=340468529&amp;response-content-disposition=attachment%3B%20filename%3DTreeViewer-Mac-arm64.dmg&amp;response-content-type=application%2Foctet-stream</string>
+				<string>https://github.com/arklumpus/TreeViewer/releases/download/v2.2.0/TreeViewer-Mac-arm64.dmg</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
