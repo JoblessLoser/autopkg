@@ -10,8 +10,12 @@
 	<string>com.github.JoblessLoser.download.Thunderbird</string>
 	<key>Input</key>
 	<dict>
-		<key>NAME</key>
-		<string>Thunderbird</string>
+		<key>LOCALE</key>
+			<string>en-GB</string>
+			<key>NAME</key>
+			<string>Thunderbird</string>
+			<key>LATEST_RELEASE</key>
+			<string>THUNDERBIRD_ESR</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>
@@ -21,9 +25,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%NAME%.dmg</string>
+				<string>%NAME%-%LATEST_RELEASE%.dmg</string>
 				<key>url</key>
-				<string>https://download-installer.cdn.mozilla.net/pub/thunderbird/releases/[A-Za-z0-9]+esr/mac/en-GB/Thunderbird%[A-Za-z0-9]+esr.dmg</string>
+				<string>https://download-installer.cdn.mozilla.net/pub/thunderbird/releases/%LATEST_RELEASE%/mac/%LOCALE%/Thunderbird20%LATEST_RELEASE%.dmg</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
