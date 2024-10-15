@@ -15,7 +15,7 @@
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>Prism</string>
+		<string>Prism 10</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -23,7 +23,7 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>Convert video files into the formats you need.</string>
+			<string>Overpriced Software for generating Graphs which could easily be replaced with the opensource Application Jamovi.</string>
 			<key>developer</key>
 			<string>GraphPad Software</string>
 			<key>display_name</key>
