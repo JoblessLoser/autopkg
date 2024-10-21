@@ -15,7 +15,7 @@
 		<key>NAME</key>
 		<string>Thunderbird</string>
 		<key>LATEST_RELEASE</key>
-		<string>THUNDERBIRD_ESR</string>
+		<string>thunderbird-esr-latest</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>
@@ -27,7 +27,7 @@
 				<key>filename</key>
 				<string>%NAME%.dmg</string>
 				<key>url</key>
-				<string>https://download.mozilla.org/?product=thunderbird-esr-latest&os=osx&lang=en-GB</string>
+				<string>https://download.mozilla.org/?product=%LATEST_RELEASE%&os=osx&lang=%LOCALE%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
