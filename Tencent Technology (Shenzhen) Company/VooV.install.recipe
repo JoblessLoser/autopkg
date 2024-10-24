@@ -5,20 +5,20 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v2.3.1 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Installs the latest version of 腾讯会议.</string>
+	<string>Installs the latest version of VooV.</string>
 	<key>Identifier</key>
-	<string>com.github.JoblessLoser.install.腾讯会议</string>
+	<string>com.github.JoblessLoser.install.VooV</string>
 	<key>Input</key>
 	<dict>
 		<key>APP_FILENAME</key>
 		<string>VooV Meeting</string>
 		<key>NAME</key>
-		<string>腾讯会议</string>
+		<string>VooV</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>com.github.JoblessLoser.download.腾讯会议</string>
+	<string>com.github.JoblessLoser.download.VooV</string>
 	<key>Process</key>
 	<array>
 		<dict>

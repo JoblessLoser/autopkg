@@ -5,9 +5,9 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v2.3.1 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of 腾讯会议 and imports it into Munki.</string>
+	<string>Downloads the latest version of VooV and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.JoblessLoser.munki.腾讯会议</string>
+	<string>com.github.JoblessLoser.munki.VooV</string>
 	<key>Input</key>
 	<dict>
 		<key>APP_FILENAME</key>
@@ -15,7 +15,7 @@
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>腾讯会议</string>
+		<string>VooV</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -27,7 +27,7 @@
 			<key>developer</key>
 			<string>Tencent Technology (Shenzhen) Company</string>
 			<key>display_name</key>
-			<string>腾讯会议</string>
+			<string>VooV</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
@@ -37,7 +37,7 @@
 	<key>MinimumVersion</key>
 	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>com.github.JoblessLoser.download.腾讯会议</string>
+	<string>com.github.JoblessLoser.download.VooV</string>
 	<key>Process</key>
 	<array>
 		<dict>
