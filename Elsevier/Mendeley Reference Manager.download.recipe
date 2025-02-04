@@ -20,10 +20,13 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>re_pattern</key>
+				<string>https://static\.mendeley\.com/bin/desktop/mendeley-reference-manager-[0-9]+.[0-9]+.[0-9]+-x64\.dmg</string>
+				<key>result_output_var_name</key>
+				<string>DOWNLOAD_URL</string>
 				<key>filename</key>
-				<string>%NAME%.dmg</string>
 				<key>url</key>
-				<string>https://static.mendeley.com/bin/desktop/mendeley-reference-manager-2.129.0-x64.dmg</string>
+				<string>https://www.mendeley.com/release-notes-reference-manager/</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
