@@ -5,13 +5,13 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v2.3.1 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of TreeViewer.</string>
+	<string>Downloads the latest version of Mendeley Reference Manager.</string>
 	<key>Identifier</key>
-	<string>antony.download.TreeViewer</string>
+	<string>com.github.JoblessLoser.download.MendeleyReferenceManager</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>TreeViewer</string>
+		<string>Mendeley Reference Manager</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>
@@ -20,8 +20,13 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>re_pattern</key>
+				<string>https://static\.mendeley\.com/bin/desktop/mendeley-reference-manager-[0-9]+.[0-9]+.[0-9]+-x64\.dmg</string>
+				<key>result_output_var_name</key>
+				<string>DOWNLOAD_URL</string>
+				<key>filename</key>
 				<key>url</key>
-				<string>https://github.com/arklumpus/TreeViewer/releases/download/v2.2.0/TreeViewer-Mac-arm64.dmg</string>
+				<string>https://www.mendeley.com/release-notes-reference-manager/</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
@@ -34,9 +39,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>input_path</key>
-				<string>%pathname%/TreeViewer.app</string>
+				<string>%pathname%/Mendeley Reference Manager.app</string>
 				<key>requirement</key>
-				<string>identifier "io.github.arklumpus.TreeViewer" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "36RXN96ALK"</string>
+				<string>identifier "com.elsevier.mendeley" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "45K89Y5X9B"</string>
 			</dict>
 			<key>Processor</key>
 			<string>CodeSignatureVerifier</string>
@@ -45,7 +50,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>input_plist_path</key>
-				<string>%pathname%/TreeViewer.app/Contents/Info.plist</string>
+				<string>%pathname%/Mendeley Reference Manager.app/Contents/Info.plist</string>
 				<key>plist_version_key</key>
 				<string>CFBundleShortVersionString</string>
 			</dict>

@@ -5,13 +5,17 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v2.3.1 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of TreeViewer.</string>
+	<string>Downloads the latest version of Thunderbird.</string>
 	<key>Identifier</key>
-	<string>antony.download.TreeViewer</string>
+	<string>com.github.JoblessLoser.download.Thunderbird</string>
 	<key>Input</key>
 	<dict>
+		<key>LOCALE</key>
+		<string>en-GB</string>
 		<key>NAME</key>
-		<string>TreeViewer</string>
+		<string>Thunderbird</string>
+		<key>LATEST_RELEASE</key>
+		<string>thunderbird-esr-latest</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>
@@ -20,8 +24,10 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>filename</key>
+				<string>%NAME%.dmg</string>
 				<key>url</key>
-				<string>https://github.com/arklumpus/TreeViewer/releases/download/v2.2.0/TreeViewer-Mac-arm64.dmg</string>
+				<string>https://download.mozilla.org/?product=%LATEST_RELEASE%&amp;os=osx&amp;lang=%LOCALE%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
@@ -34,9 +40,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>input_path</key>
-				<string>%pathname%/TreeViewer.app</string>
+				<string>%pathname%/Thunderbird.app</string>
 				<key>requirement</key>
-				<string>identifier "io.github.arklumpus.TreeViewer" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "36RXN96ALK"</string>
+				<string>identifier "org.mozilla.thunderbird" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "43AQ936H96"</string>
 			</dict>
 			<key>Processor</key>
 			<string>CodeSignatureVerifier</string>
@@ -45,7 +51,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>input_plist_path</key>
-				<string>%pathname%/TreeViewer.app/Contents/Info.plist</string>
+				<string>%pathname%/Thunderbird.app/Contents/Info.plist</string>
 				<key>plist_version_key</key>
 				<string>CFBundleShortVersionString</string>
 			</dict>
