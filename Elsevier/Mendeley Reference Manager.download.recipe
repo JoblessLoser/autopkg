@@ -24,7 +24,6 @@
 				<string>https://static\.mendeley\.com/bin/desktop/mendeley-reference-manager-[0-9]+.[0-9]+.[0-9]+-x64\.dmg</string>
 				<key>result_output_var_name</key>
 				<string>DOWNLOAD_URL</string>
-				<key>filename</key>
 				<key>url</key>
 				<string>https://www.mendeley.com/release-notes-reference-manager/</string>
 			</dict>
