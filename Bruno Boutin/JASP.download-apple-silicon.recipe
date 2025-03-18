@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Comment</key>
+	<string>Created with Recipe Robot v2.3.2 (https://github.com/homebysix/recipe-robot)</string>
+	<key>Description</key>
+	<string>Downloads the latest version of JASP.</string>
+	<key>Identifier</key>
+	<string>com.github.JoblessLoser.download.JASP</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>JASP</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>2.3</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%.dmg</string>
+				<key>url</key>
+				<string>https://objects.githubusercontent.com/github-production-release-asset-2e65be/10426982/88ce8bad-c2c9-4d13-b65f-e8572cc02591?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=releaseassetproduction%2F20250318%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250318T143607Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=b46da8012693c2645c6441d854b3f5af86d3af16a0a75583d3ca15fde87d924e&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=attachment%3B%20filename%3DJASP-0.19.3.0-MacOS-x86_64.dmg&amp;response-content-type=application%2Foctet-stream</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_path</key>
+				<string>%pathname%/JASP.app</string>
+				<key>requirement</key>
+				<string>identifier "org.jaspstats.jasp" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = AWJJ3YVK9B</string>
+			</dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_plist_path</key>
+				<string>%pathname%/JASP.app/Contents/Info.plist</string>
+				<key>plist_version_key</key>
+				<string>CFBundleShortVersionString</string>
+			</dict>
+			<key>Processor</key>
+			<string>Versioner</string>
+		</dict>
+	</array>
+</dict>
+</plist>
