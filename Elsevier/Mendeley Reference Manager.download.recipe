@@ -28,6 +28,10 @@
 				<string>https://www.mendeley.com/download-reference-manager/macOS</string>
 			</dict>
 			<key>Processor</key>
+			<string>URLTextSearcher</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
 			<string>URLDownloader</string>
 		</dict>
 		<dict>
