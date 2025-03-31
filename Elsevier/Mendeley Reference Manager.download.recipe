@@ -25,7 +25,7 @@
 				<key>result_output_var_name</key>
 				<string>DOWNLOAD_URL</string>
 				<key>url</key>
-				<string>https://www.mendeley.com/release-notes-reference-manager/</string>
+				<string>https://www.mendeley.com/download-reference-manager</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>

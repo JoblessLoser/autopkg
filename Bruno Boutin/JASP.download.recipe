@@ -23,7 +23,7 @@
 				<key>filename</key>
 				<string>%NAME%.dmg</string>
 				<key>url</key>
-				<string>https://objects.githubusercontent.com/github-production-release-asset-2e65be/10426982/88ce8bad-c2c9-4d13-b65f-e8572cc02591?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=releaseassetproduction%2F20250318%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250318T143607Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=b46da8012693c2645c6441d854b3f5af86d3af16a0a75583d3ca15fde87d924e&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=attachment%3B%20filename%3DJASP-0.19.3.0-MacOS-x86_64.dmg&amp;response-content-type=application%2Foctet-stream</string>
+				<string>https://jasp-stats.org/thank-you-for-downloading-jasp-macos/</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
