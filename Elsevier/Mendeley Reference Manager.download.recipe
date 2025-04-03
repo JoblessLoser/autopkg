@@ -21,7 +21,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>re_pattern</key>
-				<string>https://static\.mendeley\.com/bin/desktop/mendeley-reference-manager-[0-9]+\.[0-9]+\.[0-9]+-x64\.dmg</string>
+				<string>https://static\.mendeley\.com/bin/desktop/mendeley-reference-manager-[0-9]+\.[0-9]+\.[0-9]+-universal\.dmg</string>
 				<key>result_output_var_name</key>
 				<string>DOWNLOAD_URL</string>
 				<key>url</key>
