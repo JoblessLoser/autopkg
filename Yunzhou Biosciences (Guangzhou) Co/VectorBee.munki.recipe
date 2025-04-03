@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Comment</key>
+	<string>Created with Recipe Robot v2.3.2 (https://github.com/homebysix/recipe-robot)</string>
+	<key>Description</key>
+	<string>Downloads the latest version of VectorBee and imports it into Munki.</string>
+	<key>Identifier</key>
+	<string>com.github.JoblessLoser.munki.VectorBee</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/%NAME%</string>
+		<key>NAME</key>
+		<string>VectorBee</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>description</key>
+			<string>VectorBuilder is a global leader in gene delivery technologies that offers a wide spectrum of gene delivery solutions covering all research and clinical needs, including vector design, plasmid cloning, virus packaging, cell line engineering, directed evolution, GMP manufacturing, and many more. VectorBee is the latest addition to this growing portfolio. Having serviced tens of thousands of labs and biotech/pharma companies across the globe, VectorBuilder's goal is to make research easy and fun. Give VectorBee a try and get amazed by how this little bee can empower your research! </string>
+			<key>developer</key>
+			<string>Yunzhou Biosciences (Guangzhou) Co</string>
+			<key>display_name</key>
+			<string>VectorBee</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>2.3</string>
+	<key>ParentRecipe</key>
+	<string>com.github.JoblessLoser.download.VectorBee</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%pathname%</string>
+				<key>repo_subdirectory</key>
+				<string>%MUNKI_REPO_SUBDIR%</string>
+			</dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
+		</dict>
+	</array>
+</dict>
+</plist>
