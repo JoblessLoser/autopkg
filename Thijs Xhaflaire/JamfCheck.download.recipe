@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Comment</key>
+	<string>Created with Recipe Robot v2.3.2 (https://github.com/homebysix/recipe-robot)</string>
+	<key>Description</key>
+	<string>Downloads the latest version of JamfCheck.</string>
+	<key>Identifier</key>
+	<string>com.github.JoblessLoser.download.JamfCheck</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>JamfCheck</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>2.3</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%.dmg</string>
+				<key>url</key>
+				<string>https://objects.githubusercontent.com/github-production-release-asset-2e65be/682549434/6df6f558-e35b-49a7-bf53-037f4ba6fd22?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=releaseassetproduction%2F20250703%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250703T130857Z&amp;X-Amz-Expires=1800&amp;X-Amz-Signature=7bd2af569f76e48c1b64c2079bddac510eb81acaac363dc0ace46d221299a825&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=attachment%3B%20filename%3DJamfCheck.dmg&amp;response-content-type=application%2Foctet-stream</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_path</key>
+				<string>%pathname%/JamfCheck.app</string>
+				<key>requirement</key>
+				<string>anchor apple generic and identifier "com.txhaflaire.JamfCheck" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = CLQKFNPCCP)</string>
+			</dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_plist_path</key>
+				<string>%pathname%/JamfCheck.app/Contents/Info.plist</string>
+				<key>plist_version_key</key>
+				<string>CFBundleShortVersionString</string>
+			</dict>
+			<key>Processor</key>
+			<string>Versioner</string>
+		</dict>
+	</array>
+</dict>
+</plist>
