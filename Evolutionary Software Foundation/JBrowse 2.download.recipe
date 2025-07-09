@@ -20,13 +20,15 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>filename</key>
-				<string>%NAME%.dmg</string>
+				<key>re_pattern</key>
+				<string>https://github\.com/GMOD/jbrowse-components/releases/download/[0-9]+\.[0-9]+\.[0-9]+/jbrowse-desktop-v[0-9]+\.[0-9]+\.[0-9]+-mac\.dmg</string>
+				<key>result_output_var_name</key>
+				<string>DOWNLOAD_URL</string>
 				<key>url</key>
-				<string>https://objects.githubusercontent.com/github-production-release-asset-2e65be/151754121/4634d82a-1c53-4230-b6aa-449869a58c13?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=releaseassetproduction%2F20250709%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250709T104258Z&amp;X-Amz-Expires=1800&amp;X-Amz-Signature=5c1cc6e400ed72317c1d8e5a88dfebef3cb3b08dae30ec9d98a1406957898626&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=attachment%3B%20filename%3Djbrowse-desktop-v3.5.1-mac.dmg&amp;response-content-type=application%2Foctet-stream</string>
+				<string>https://jbrowse.org/jb2/download/</string>
 			</dict>
 			<key>Processor</key>
-			<string>URLDownloader</string>
+			<string>URLTextSearcher</string>
 		</dict>
 		<dict>
 			<key>Processor</key>
