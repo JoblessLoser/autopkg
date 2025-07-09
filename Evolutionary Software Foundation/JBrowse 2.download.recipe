@@ -21,7 +21,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>re_pattern</key>
-				<string>https://github\.com/GMOD/jbrowse-components/releases/download/[0-9]+\.[0-9]+\.[0-9]+/jbrowse-desktop-v[0-9]+\.[0-9]+\.[0-9]+-mac\.dmg</string>
+				<string>https://github\.com/GMOD/jbrowse-components/releases/download/v[0-9]+\.[0-9]+\.[0-9]+/jbrowse-desktop-v[0-9]+\.[0-9]+\.[0-9]+-mac\.dmg</string>
 				<key>result_output_var_name</key>
 				<string>DOWNLOAD_URL</string>
 				<key>url</key>
