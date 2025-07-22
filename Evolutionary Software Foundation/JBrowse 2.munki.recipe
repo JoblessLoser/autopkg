@@ -21,7 +21,13 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>Popular multimedia player.</string>
+			<string>The next-generation genome browser
+JBrowse is a new kind of genome browser that runs on the web, on your desktop, or embedded in your app
+
+Improved structural variant and comparative genomics visualization with linear, circular, dotplot, and synteny views
+Support for many common data types including BAM, CRAM, tabix indexed VCF, GFF, BED, BigBed, BigWig, and several specialized formats
+Endless extensibility with a plugin ecosytem which can add additional view types, track types, data adapters, and more!
+See a summary of new features and a comparison to JBrowse 1</string>
 			<key>developer</key>
 			<string>Evolutionary Software Foundation</string>
 			<key>display_name</key>
