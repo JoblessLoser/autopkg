@@ -27,7 +27,7 @@
 				<key>result_output_var_name</key>
 				<string>DOWNLOAD_URL</string>
 				<key>url</key>
-				<string>https://download.gimp.org/gimp/v3.0/macos</string>
+				<string>https://download.gimp.org/gimp/v3.0/macos/</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLTextSearcher</string>
