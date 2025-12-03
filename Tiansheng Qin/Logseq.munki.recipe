@@ -32,11 +32,11 @@ so that you can come up with new outputs more easily.</string>
 			<key>display_name</key>
 			<string>Logseq</string>
 			<key>name</key>
+			<string>%NAME%</string>
 			<key>supported_architectures</key>
 			<array>
 				<string>%SUPPORTED_ARCH%</string>
 			</array>
-			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<true/>
 		</dict>
