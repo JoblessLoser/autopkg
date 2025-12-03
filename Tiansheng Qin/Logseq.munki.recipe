@@ -23,7 +23,10 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>Save articles, newsletters, and documents and read them later.</string>
+			<string>Braindump everything into Logseq.
+New ideas will pop up with time.
+Using Logseq helps you organize your thoughts and ideas
+so that you can come up with new outputs more easily.</string>
 			<key>developer</key>
 			<string>Tiansheng Qin</string>
 			<key>display_name</key>
