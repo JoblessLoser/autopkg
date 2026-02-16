@@ -22,6 +22,8 @@
 			</array>
 			<key>description</key>
 			<string>Affinity gives you pro-grade photo editing, vector design, illustration, and layout — all in one app, for free.</string>
+			<key>category</key>
+			<string>Graphics</string>			
 			<key>developer</key>
 			<string>Canva</string>
 			<key>display_name</key>
