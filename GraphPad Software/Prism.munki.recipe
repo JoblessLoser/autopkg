@@ -27,7 +27,7 @@
 			<key>developer</key>
 			<string>GraphPad Software</string>
 			<key>display_name</key>
-			<string>Prism</string>
+			<string>Prism 11</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
