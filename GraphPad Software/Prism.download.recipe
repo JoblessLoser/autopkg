@@ -11,7 +11,7 @@
 	<key>Input</key>
 	<dict>
 		<key>APP_FILENAME</key>
-		<string>Prism 10</string>
+		<string>Prism 11</string>
 		<key>NAME</key>
 		<string>Prism</string>
 	</dict>
@@ -38,7 +38,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>input_path</key>
-				<string>%pathname%/Prism 10.app</string>
+				<string>%pathname%/Prism 11.app</string>
 				<key>requirement</key>
 				<string>identifier "com.GraphPad.Prism" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = YQ2D36NS9M</string>
 			</dict>
@@ -49,7 +49,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>input_plist_path</key>
-				<string>%pathname%/Prism 10.app/Contents/Info.plist</string>
+				<string>%pathname%/Prism 11.app/Contents/Info.plist</string>
 				<key>plist_version_key</key>
 				<string>CFBundleShortVersionString</string>
 			</dict>

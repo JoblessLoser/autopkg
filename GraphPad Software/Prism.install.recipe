@@ -11,7 +11,7 @@
 	<key>Input</key>
 	<dict>
 		<key>APP_FILENAME</key>
-		<string>Prism 10</string>
+		<string>Prism 11</string>
 		<key>NAME</key>
 		<string>Prism</string>
 	</dict>
@@ -32,7 +32,7 @@
 						<key>destination_path</key>
 						<string>/Applications</string>
 						<key>source_item</key>
-						<string>Prism 10.app</string>
+						<string>Prism 11.app</string>
 					</dict>
 				</array>
 			</dict>
