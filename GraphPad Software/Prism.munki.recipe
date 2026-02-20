@@ -23,7 +23,7 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>Overpriced Software for generating Graphs which could easily be replaced with the opensource Application such as JASP or Jamovi.</string>
+			<string>Expensive software for generating graphs, which could easily be replaced with open-source applications such as JASP or Jamovi. The software can be run for free in viewer mode, but to create or edit files, you will need to obtain a subscription from Academia via the university marketplace.</string>
 			<key>developer</key>
 			<string>GraphPad Software</string>
 			<key>display_name</key>
