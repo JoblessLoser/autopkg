@@ -28,12 +28,12 @@
 			<array>
 				<string>testing</string>
 			</array>
-			<key>
+			<key>description</key>
+			<string>
 Safely store your files and access them from any device
 
 Choose folders on your computer to sync with Google Drive or backup to Google Photos, and access all of your content directly from your PC or Mac
-</key>
-			<string> </string>
+			</string>
 			<key>developer</key>
 			<string>Google</string>
 			<key>display_name</key>
