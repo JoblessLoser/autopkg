@@ -40,6 +40,43 @@ Choose folders on your computer to sync with Google Drive or backup to Google Ph
 			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<true/>
+			<key>installcheck_script</key>
+	<string>#!/bin/bash
+
+# check the quotation marks!
+
+ApplicationName="Google Drive"
+TargetVersion="%version%"
+echo "Checking for version $TargetVersion of $ApplicationName"
+
+version=$(defaults read "/Library/Application\ Support/Google/GoogleUpdater/%version%/GoogleUpdater.app/Contents/PkgInfo" | grep CFBundleShortVersionString | sed 's/.*"\(.*\)".*/\1/')
+
+if [[ "$version" == "" ]]
+ then
+   echo "$ApplicationName is not installed"
+   exit 0
+fi
+
+echo "Found version $version of $ApplicationName"
+
+versions="$version $TargetVersion"
+
+HighestVersion=`echo $versions  | xargs -n1 | sort -V | tail -n 1 `
+
+if [[ "$version" == "TargetVersion" ]]
+then
+echo "$ApplicationName version $version is installed so all is well"
+exit 1
+else
+	if [[ "$TargetVersion" == "HighestVersion" ]]
+	  then
+		echo "$ApplicationName version $version is installed so we need to update to $TargetVersion"
+		exit 0
+	else
+		echo "$ApplicationName version $version is higher then $TargetVersion so do not install"  
+		exit 1
+	fi
+fi</string>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
