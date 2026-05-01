@@ -43,8 +43,6 @@ Choose folders on your computer to sync with Google Drive or backup to Google Ph
 			<key>installcheck_script</key>
 	<string>#!/bin/bash
 
-# check the quotation marks!
-
 ApplicationName="Google Drive"
 TargetVersion="%version%"
 
