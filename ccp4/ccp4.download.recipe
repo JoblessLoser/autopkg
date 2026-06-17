@@ -7,13 +7,13 @@
 	<key>Description</key>
 	<string>Downloads the latest version of ccp4</string>
 	<key>Identifier</key>
-	<string>com.github.JoblessLoser.download.ccp4cloud-local</string>
+	<string>com.github.JoblessLoser.download.ccp4</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>ccp4cloud-local</string>
+		<string>ccp4</string>
 		<key>SUPPORTED_ARCH</key>
-		<string>arm64</string>
+		<string>arm64</string>z
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>
