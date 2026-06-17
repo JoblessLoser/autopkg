@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Comment</key>
+	<string>Created with Recipe Robot v2.5.0 (https://github.com/homebysix/recipe-robot)</string>
+	<key>Description</key>
+	<string>Downloads the latest version of ccp4</string>
+	<key>Identifier</key>
+	<string>com.github.JoblessLoser.download.ccp4</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>ccp4</string>
+		<key>SUPPORTED_ARCH</key>
+		<string>arm64</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>2.3</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>re_pattern</key>
+				<string>licence\.php?pkg=ccp4-%SUPPORTED_ARCH%\&os=macos&sid=.*</string>
+				<key>result_output_var_name</key>
+				<string>DOWNLOAD_LOCATION</string>
+				<key>url</key>
+				<string>https://ccp4serv6.rc-harwell.ac.uk/9/downloads/#os=macos</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>re_pattern</key>
+				<string>download_file\.php?os=macos\&pkg=ccp4-%SUPPORTED_ARCH%\&sid=.*</string>
+				<key>result_output_var_name</key>
+				<string>DOWNLOAD_URL</string>
+				<key>url</key>
+				<string>https://ccp4serv6.rc-harwell.ac.uk/9/downloads/%DOWNLOAD_LOCATION%</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>https://www.ccp4.ac.uk/download/%DOWNLOAD_URL%</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
+</dict>
+</plist>
