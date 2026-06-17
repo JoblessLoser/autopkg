@@ -23,6 +23,19 @@
 			<key>Arguments</key>
 			<dict>
 				<key>re_pattern</key>
+				<string>v[0-9]+\.[0-9]+\.[0-9]+</string>
+				<key>result_output_var_name</key>
+				<string>VERSION</string>
+				<key>url</key>
+				<string>https://ccp4serv6.rc-harwell.ac.uk/9/downloads/#os=macos</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>re_pattern</key>
 				<string>sid=[^&quot;]*</string>
 				<key>result_output_var_name</key>
 				<string>SID</string>
@@ -52,6 +65,8 @@
 			<dict>
 				<key>url</key>
 				<string>https://www.ccp4.ac.uk/download/download_file.php?os=macos&amp;pkg=ccp4-%SUPPORTED_ARCH%&amp;%DOWNLOAD_URL%</string>
+				<key>filename</key>
+				<string>ccp4-%VERSION%-macos%SUPPORTED_ARCH%.tar.gz</string>
 			</dict>
 		</dict>
 		<dict>
