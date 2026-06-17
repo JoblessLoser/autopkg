@@ -13,7 +13,7 @@
 		<key>NAME</key>
 		<string>ccp4</string>
 		<key>SUPPORTED_ARCH</key>
-		<string>arm64</string>z
+		<string>arm64</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>
