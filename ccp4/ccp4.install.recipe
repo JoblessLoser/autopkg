@@ -32,17 +32,52 @@
 			<key>Processor</key>
 			<string>Unarchiver</string>
 		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>app_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/ccp4-9/coot-1.app</string>
-				<key>pkg_path</key>
-				<string>%RECIPE_CACHE_DIR%/ccp4-%VERSION%-macos%SUPPORTED_ARCH%-coot-1.app.pkg</string>
-			</dict>
-			<key>Processor</key>
-			<string>AppPkgCreator</string>
-		</dict>
+<!-- 1. Copy the application to the package root -->
+    <dict>
+        <key>Processor</key>
+        <string>Copier</string>
+        <key>Arguments</key>
+        <dict>
+            <key>source_path</key>
+            <string>%destination_path%</string>
+            <key>destination_path</key>
+            <string>%RECIPE_CACHE_DIR%/pkgroot/Applications/</string>
+        </dict>
+    </dict>
+    <!-- 2. Create the actual .pkg installer using PkgCreator -->
+    <dict>
+        <key>Processor</key>
+        <string>PkgCreator</string>
+        <key>Arguments</key>
+        <dict>
+            <key>pkg_request</key>
+            <dict>
+                <key>pkgname</key>
+                <string>%NAME%-%VERSION%-%SUPPORTED_ARCH%</string>
+                <key>version</key>
+                <string>%VERSION%</string>
+                <key>id</key>
+                <string>com.%NAME%.pkg</string>
+                <key>options</key>
+                <string>purge_ds_store</string>
+				<key>pkgroot</key>
+                <string>%RECIPE_CACHE_DIR%/pkgroot</string>
+				<key>pkgdir</key>
+                <string>%RECIPE_CACHE_DIR%</string>
+				<key>chown</key>
+                <array>
+                    <dict>
+                        <key>path</key>
+                        <string>Applications</string>
+                        <key>user</key>
+                        <string>root</string>
+                        <key>group</key>
+                        <string>admin</string>
+                    </dict>
+                </array>
+            </dict>
+        </dict>
+    </dict>
 	</array>
 </dict>
 </plist>
