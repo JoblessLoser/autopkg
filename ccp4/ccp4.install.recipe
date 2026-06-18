@@ -38,7 +38,7 @@
 				<key>dmg_root</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
 				<key>dmg_path</key>
-				<string>%RECIPE_CACHE_DIR%/ccp4-%VERSION%-macos%SUPPORTED_ARCH.dmg</string>
+				<string>%RECIPE_CACHE_DIR%/ccp4-%VERSION%-macos%SUPPORTED_ARCH%.dmg</string>
 			</dict>
 			<key>Processor</key>
 			<string>DmgCreator</string>
@@ -46,20 +46,13 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>dmg_path</key>
-				<string>%dmg_path%</string>
-				<key>items_to_copy</key>
-				<array>
-					<dict>
-						<key>destination_path</key>
-						<string>/Applications</string>
-						<key>source_item</key>
-						<string>ccp4-9</string>
-					</dict>
-				</array>
+				<key>source_path</key>
+				<string>%dmg_path%/ccp4-9</string>
+				<key>destination_path</key>
+				<string>/Applications/ccp4-9</string>
 			</dict>
 			<key>Processor</key>
-			<string>InstallFromDMG</string>
+			<string>Copier</string>
 		</dict>
 	</array>
 </dict>
