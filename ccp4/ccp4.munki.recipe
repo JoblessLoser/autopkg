@@ -23,7 +23,36 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>Connect AI agents to Mail, Calendar, Teams, OneDrive and 217 more local tools. No cloud, no API keys.</string>
+			<string>CCP4: Software for Macromolecular X-Ray Crystallography
+
+The CCP4 software provides an integrated suite of programs for determination of macromolecular structures by X-ray crystallography that can be accessed through a graphical interface on your computer, through CCP4 Cloud or through  CCP4 Online.
+
+CCP4 offers a variety of workshops and courses for students, early career researchers, and project leaders. We aim to develop cutting edge approaches to experimental determination and analysis of macromolecular structures. Please contact us if you want to join CCP4.
+
+Sign up for the Bulletin Board email list and follow us on Twitter for news and help. Don not hesitate to report any issues you may have with our software.
+
+The suite is available without cost to academic and non-profit institutions who will not be using the CCP4 package for commercial activities, subject to a completed CCP4 Academic Licence being returned to the CCP4 secretary.
+
+A charge is made to commercial users (this includes academic or research institutions offering a commercial service) who should contact the CCP4 secretary to make arrangements, see separate Commercial Users Page. Please note that all charges for the suite are used for CCP4 activities.
+
+We provide the CCP4 libraries under version 3 of the LGPL licence. The relevant licence files are a modified GPLv3 licence (in Word, see also a poorly-formatted text version) together with the additional permissions of the LGPLv3 licence.
+
+Please note:
+
+A listing of GNU software included in the CCP4 suite is available here
+Additional terms and conditions pertaining to some included 3rd party software are included in the distribution, and are also available here for reference
+The current version of the licence was made available in September 2005. This is required for existing versions of release 5.0 of the suite, release 6.0 of the suite and subsequent releases until further notice. The previous version of the academic licence is no longer valid.
+
+For non-profit users, the licence must be signed, and returned by fax or post (NOT email) to the following address:
+
+Secretary to CCP4 c/o Shirley Miller
+STFC Daresbury Laboratory
+Warrington
+WA4 4AD
+United Kingdom
+Fax: (+44) 1235 567720
+Our policy is that we will not acknowledge receipt of academic licences unless specifically requested - please download the suite as soon as you have sent the signed licence.
+</string>
 			<key>developer</key>
 			<string></string>
 			<key>display_name</key>
@@ -57,17 +86,63 @@
 			<key>Processor</key>
 			<string>Unarchiver</string>
 		</dict>
-		<dict>
+<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>dmg_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%.dmg</string>
-				<key>dmg_root</key>
+				<key>archive_path</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/ccp4-%VERSION%-macos%SUPPORTED_ARCH%.tar.gz</string>
+				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+				<key>purge_destination</key>
+				<true/>
 			</dict>
 			<key>Processor</key>
-			<string>DmgCreator</string>
+			<string>Unarchiver</string>
 		</dict>
+        <dict>
+            <key>Processor</key>
+            <string>Copier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>source_path</key>
+                <string>%destination_path%</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/pkgroot/Applications/</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>PkgCreator</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_request</key>
+                <dict>
+                    <key>pkgname</key>
+                    <string>%NAME%-%VERSION%-%SUPPORTED_ARCH%</string>
+                    <key>version</key>
+                    <string>%VERSION%</string>
+                    <key>id</key>
+                    <string>com.%NAME%.pkg</string>
+                    <key>options</key>
+                    <string>purge_ds_store</string>
+                    <key>pkgroot</key>
+                    <string>%RECIPE_CACHE_DIR%/pkgroot</string>
+                    <key>pkgdir</key>
+                    <string>%RECIPE_CACHE_DIR%</string>
+                    <key>chown</key>
+                    <array>
+                        <dict>
+                            <key>path</key>
+                            <string>Applications</string>
+                            <key>user</key>
+                            <string>root</string>
+                            <key>group</key>
+                            <string>admin</string>
+                        </dict>
+                    </array>
+                </dict>
+            </dict>
+        </dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
