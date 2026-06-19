@@ -59,7 +59,7 @@
 					<string>-F</string>
             		<string>id=%ID%</string>
 					<string>-F</string>
-            		<string>pkg=ccp4-%DOWNLOAD_ARCH%</string>
+            		<string>pkg=ccp4-%SUPPORTED_ARCH%</string>
 					<string>-F</string>
             		<string>subpackage=ccp4</string>
 					<string>-F</string>
@@ -70,7 +70,7 @@
             		<string>result=accept</string>
 				</array>
 				<key>url</key>
-				<string>https://ccp4serv6.rc-harwell.ac.uk/9/downloads/licence.php?pkg=ccp4-%DOWNLOAD_ARCH%&amp;os=macos&amp;sid=%ID%</string>
+				<string>https://ccp4serv6.rc-harwell.ac.uk/9/downloads/licence.php?pkg=ccp4-%SUPPORTED_ARCH%&amp;os=macos&amp;sid=%ID%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLTextSearcher</string>
@@ -81,7 +81,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>https://www.ccp4.ac.uk/download/download_file.php?os=macos&amp;pkg=ccp4-%DOWNLOAD_ARCH%&amp;sid=%ID%</string>
+				<string>https://www.ccp4.ac.uk/download/download_file.php?os=macos&amp;pkg=ccp4-%SUPPORTED_ARCH%&amp;sid=%ID%</string>
 				<key>filename</key>
 				<string>ccp4-%VERSION%-macos%DOWNLOAD_ARCH%.tar.gz</string>
 			</dict>
