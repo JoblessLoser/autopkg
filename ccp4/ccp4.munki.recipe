@@ -77,22 +77,9 @@ Our policy is that we will not acknowledge receipt of academic licences unless s
 			<key>Arguments</key>
 			<dict>
 				<key>archive_path</key>
-				<string>%pathname%</string>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
-				<key>purge_destination</key>
-				<true/>
-			</dict>
-			<key>Processor</key>
-			<string>Unarchiver</string>
-		</dict>
-<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>archive_path</key>
 				<string>%RECIPE_CACHE_DIR%/downloads/ccp4-%VERSION%-macos%SUPPORTED_ARCH%.tar.gz</string>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+				<string>%RECIPE_CACHE_DIR%/%NAME%-%SUPPORTED_ARCH%</string>
 				<key>purge_destination</key>
 				<true/>
 			</dict>
@@ -107,7 +94,7 @@ Our policy is that we will not acknowledge receipt of academic licences unless s
                 <key>source_path</key>
                 <string>%destination_path%</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/pkgroot/Applications/</string>
+                <string>%RECIPE_CACHE_DIR%/%SUPPORTED_ARCH%/pkgroot/Applications/</string>
             </dict>
         </dict>
         <dict>
@@ -126,7 +113,7 @@ Our policy is that we will not acknowledge receipt of academic licences unless s
                     <key>options</key>
                     <string>purge_ds_store</string>
                     <key>pkgroot</key>
-                    <string>%RECIPE_CACHE_DIR%/pkgroot</string>
+                    <string>%RECIPE_CACHE_DIR%/%SUPPORTED_ARCH%/pkgroot</string>
                     <key>pkgdir</key>
                     <string>%RECIPE_CACHE_DIR%</string>
                     <key>chown</key>
