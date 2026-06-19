@@ -23,7 +23,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>re_pattern</key>
-				<string>v[0-9]+\.[0-9]+\.[0-9]+</string>
+				<string>v([0-9]+\.[0-9]+\.[0-9]+)</string>
 				<key>result_output_var_name</key>
 				<string>VERSION</string>
 				<key>url</key>
@@ -36,9 +36,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>re_pattern</key>
-				<string>sid=[^&quot;]*</string>
+				<string>sid=([^&quot;]*)</string>
 				<key>result_output_var_name</key>
-				<string>SID</string>
+				<string>ID</string>
 				<key>url</key>
 				<string>https://ccp4serv6.rc-harwell.ac.uk/9/downloads/#os=macos</string>
 			</dict>
@@ -52,8 +52,25 @@
 				<string>sid=[^&quot;]*</string>
 				<key>result_output_var_name</key>
 				<string>DOWNLOAD_URL</string>
+				<key>curl_opts</key>
+				<array>
+            		<string>-X</string>
+            		<string>POST</string>
+					<string>-F</string>
+            		<string>id=%ID%</string>
+					<string>-F</string>
+            		<string>pkg=ccp4-%SUPPORTED_ARCH%</string>
+					<string>-F</string>
+            		<string>subpackage=ccp4</string>
+					<string>-F</string>
+            		<string>os=macos</string>
+					<string>-F</string>
+            		<string>sid=%ID%</string>
+					<string>-F</string>
+            		<string>result=accept</string>
+				</array>
 				<key>url</key>
-				<string>https://ccp4serv6.rc-harwell.ac.uk/9/downloads/licence.php?pkg=ccp4-%SUPPORTED_ARCH%&amp;os=macos&amp;%SID%</string>
+				<string>https://ccp4serv6.rc-harwell.ac.uk/9/downloads/licence.php</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLTextSearcher</string>
