@@ -14,8 +14,10 @@
 		<string>ccp4</string>
 		<key>SUPPORTED_ARCH</key>
 		<string>arm64</string>
+		<!-- alt x86_64 -->
 		<key>DOWNLOAD_ARCH</key>
 		<string>arm64</string>
+		<!-- alt x64 -->
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>
