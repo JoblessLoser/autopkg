@@ -17,26 +17,14 @@
 	<string>2.3</string>
 	<key>Process</key>
 	<array>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>re_pattern</key>
-				<string>https://downloads.owllabs.com/release/DESKTOPAPP_[^"]*</string>
-				<key>result_output_var_name</key>
-				<string>URL</string>
-				<key>url</key>
-				<string>https://resources.owllabs.com/app-download#app-downloads</string>
-			</dict>
-			<key>Processor</key>
-			<string>URLTextSearcher</string>
-		</dict>
+
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
 				<string>%NAME%.zip</string>
 				<key>url</key>
-				<string>%URL%</string>
+				<string>https://dashboard.barn.owllabs.com/products/DESKTOPAPP/download/latest/dmg</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
