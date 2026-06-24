@@ -19,6 +19,9 @@
 		<key>SUPPORTED_ARCH</key>
 		<string>arm64</string>
 		<!-- alt x86_64 -->
+		<key>DOWNLOAD_ARCH</key>
+		<string>arm64</string>
+		<!-- alt x64 -->
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
