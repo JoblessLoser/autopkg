@@ -21,7 +21,7 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>Software to controll the rawtherapee by Owl Labs. The rawtherapee is an all-in-one, 360-degree video conferencing device designed for hybrid meetings and classrooms. Combining a camera, microphone, and speaker in a single unit, it will automatically focus on whoever is speaking, creating a natural, face-to-face experience for remote participants.</string>
+			<string>RawTherapee is a free, cross-platform raw image processing program.</string>
 			<key>developer</key>
 			<string>Owl Labs</string>
 			<key>display_name</key>
