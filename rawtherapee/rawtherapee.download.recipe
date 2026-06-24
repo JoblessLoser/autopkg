@@ -35,7 +35,7 @@
 			<key>Processor</key>
 			<string>URLTextSearcher</string>
 		</dict>
-				<dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>request_headers</key>
@@ -44,15 +44,15 @@
         			<string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36</string>
 				</dict>
 				<key>re_pattern</key>
-				<string>href="(https:\/\/rawtherapee.com\/shared\/builds\/mac\/RawTherapee_macOS_[^"]*)"</string>
+				<string>href="https:\/\/rawtherapee.com\/shared\/builds\/mac\/(RawTherapee_macOS_[^"]*).zip"</string>
 				<key>result_output_var_name</key>
-				<string>DOWNLOADURL</string>
+				<string>DOWNLOADZIPNAME</string>
 				<key>url</key>
 				<string>https://rawtherapee.com/downloads/%VERSION%/</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLTextSearcher</string>
-		</dict>
+		</dict>		
 		<dict>
 			<key>Arguments</key>
 			<dict>
@@ -64,7 +64,7 @@
         			<string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36</string>
 				</dict>
 				<key>url</key>
-				<string>%DOWNLOADURL%</string>
+				<string>https://rawtherapee.com/shared/builds/mac/%DOWNLOADZIPNAME%.zip</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
@@ -89,22 +89,11 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>input_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/rawtherapee.app</string>
+				<key>dmg_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/%DOWNLOADZIPNAME%_folder/%DOWNLOADZIPNAME%.dmg</string>
 			</dict>
 			<key>Processor</key>
-			<string>CodeSignatureVerifier</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>input_plist_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/rawtherapee.app/Contents/Info.plist</string>
-				<key>plist_version_key</key>
-				<string>CFBundleShortVersionString</string>
-			</dict>
-			<key>Processor</key>
-			<string>Versioner</string>
+			<string>AppDmgVersioner</string>
 		</dict>
 	</array>
 </dict>
