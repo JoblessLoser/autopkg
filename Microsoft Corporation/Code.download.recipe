@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Comment</key>
-	<string>Created with Recipe Robot v2.3.2 (https://github.com/homebysix/recipe-robot)</string>
+	<string>Created with Recipe Robot v2.5.0 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
 	<string>Downloads the latest version of Code.</string>
 	<key>Identifier</key>
@@ -14,6 +14,12 @@
 		<string>Visual Studio Code</string>
 		<key>NAME</key>
 		<string>Code</string>
+		<key>SUPPORTED_ARCH</key>
+		<string>arm64</string>
+		<!-- alt x86_64 -->
+		<key>DOWNLOAD_ARCH</key>
+		<string>x64</string>
+		<!-- alt x64 -->
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>
@@ -22,10 +28,29 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>filename</key>
-				<string>%NAME%.zip</string>
+				<key>request_headers</key>
+    			<dict>
+					<key>User-Agent</key>
+        			<string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36</string>
+				</dict>
+				<key>re_pattern</key>
+				<string>https:\/\/update\.code\.visualstudio\.com\/[0-9.]*/darwin-%DOWNLOAD_ARCH%-user/stable</string>
+				<key>result_output_var_name</key>
+				<string>DOWNLOADURL</string>
 				<key>url</key>
-				<string>https://vscode.download.prss.microsoft.com/dbazure/download/stable/848b80aeb52026648a8ff9f7c45a9b0a80641e2e/VSCode-darwin-universal.zip</string>
+				<string>https://code.visualstudio.com/updates</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+		</dict>
+		<dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%.dmg</string>
+				<key>url</key>
+				<string>%DOWNLOADURL%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
@@ -37,21 +62,8 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>archive_path</key>
-				<string>%pathname%</string>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
-				<key>purge_destination</key>
-				<true/>
-			</dict>
-			<key>Processor</key>
-			<string>Unarchiver</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
 				<key>input_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/Visual Studio Code.app</string>
+				<string>%pathname%/Visual Studio Code.app</string>
 				<key>requirement</key>
 				<string>identifier "com.microsoft.VSCode" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9</string>
 			</dict>
@@ -62,7 +74,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>input_plist_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/Visual Studio Code.app/Contents/Info.plist</string>
+				<string>%pathname%/Visual Studio Code.app/Contents/Info.plist</string>
 				<key>plist_version_key</key>
 				<string>CFBundleShortVersionString</string>
 			</dict>
