@@ -26,7 +26,7 @@
         			<string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36</string>
 				</dict>
 				<key>re_pattern</key>
-				<string>v([.0-9]*)</string>
+				<string>v([.0-9]+)</string>
 				<key>result_output_var_name</key>
 				<string>VERSION</string>
 				<key>url</key>
@@ -44,7 +44,7 @@
         			<string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36</string>
 				</dict>
 				<key>re_pattern</key>
-				<string>href="(https://rawtherapee.com/shared/builds/mac/RawTherapee_macOS_[^"]*])"</string>
+				<string>href="(https:\/\/rawtherapee.com\/shared\/builds\/mac\/RawTherapee_macOS_[^"]*)"</string>
 				<key>result_output_var_name</key>
 				<string>DOWNLOADURL</string>
 				<key>url</key>
