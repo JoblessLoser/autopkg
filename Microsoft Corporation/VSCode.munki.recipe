@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Code and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.JoblessLoser.munki.Code</string>
+	<string>com.github.JoblessLoser.munki.VSCode</string>
 	<key>Input</key>
 	<dict>
 		<key>APP_FILENAME</key>
@@ -15,7 +15,10 @@
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>Code</string>
+		<string>VSCode</string>
+		<key>SUPPORTED_ARCH</key>
+		<string>arm64</string>
+		<!-- alt x86_64 -->
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -33,6 +36,10 @@ Seamlessly switch between working with agents and hands-on coding, all within th
 			<string>Code</string>
 			<key>name</key>
 			<string>%NAME%</string>
+			<key>supported_architectures</key>
+			<array>
+				<string>%SUPPORTED_ARCH%</string>
+			</array>
 			<key>unattended_install</key>
 			<true/>
 		</dict>
@@ -40,7 +47,7 @@ Seamlessly switch between working with agents and hands-on coding, all within th
 	<key>MinimumVersion</key>
 	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>com.github.JoblessLoser.download.Code</string>
+	<string>com.github.JoblessLoser.download.VSCode</string>
 	<key>Process</key>
 	<array>
 		<dict>

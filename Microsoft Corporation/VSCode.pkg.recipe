@@ -7,18 +7,18 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Code and creates a package.</string>
 	<key>Identifier</key>
-	<string>com.github.JoblessLoser.pkg.Code</string>
+	<string>com.github.JoblessLoser.pkg.VSCode</string>
 	<key>Input</key>
 	<dict>
 		<key>APP_FILENAME</key>
 		<string>Visual Studio Code</string>
 		<key>NAME</key>
-		<string>Code</string>
+		<string>VSCode</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>com.github.JoblessLoser.download.Code</string>
+	<string>com.github.JoblessLoser.download.VSCode</string>
 	<key>Process</key>
 	<array>
 		<dict>

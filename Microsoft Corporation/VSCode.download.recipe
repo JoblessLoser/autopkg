@@ -7,18 +7,18 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Code.</string>
 	<key>Identifier</key>
-	<string>com.github.JoblessLoser.download.Code</string>
+	<string>com.github.JoblessLoser.download.VSCode</string>
 	<key>Input</key>
 	<dict>
 		<key>APP_FILENAME</key>
 		<string>Visual Studio Code</string>
 		<key>NAME</key>
-		<string>Code</string>
+		<string>VSCode</string>
 		<key>SUPPORTED_ARCH</key>
 		<string>arm64</string>
 		<!-- alt x86_64 -->
 		<key>DOWNLOAD_ARCH</key>
-		<string>x64</string>
+		<string>arm64</string>
 		<!-- alt x64 -->
 	</dict>
 	<key>MinimumVersion</key>
@@ -34,7 +34,7 @@
         			<string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36</string>
 				</dict>
 				<key>re_pattern</key>
-				<string>https:\/\/update\.code\.visualstudio\.com\/[0-9.]*/darwin-%DOWNLOAD_ARCH%-user/stable</string>
+				<string>https:\/\/update\.VSCode\.visualstudio\.com\/[0-9.]*/darwin-%DOWNLOAD_ARCH%-user/stable</string>
 				<key>result_output_var_name</key>
 				<string>DOWNLOADURL</string>
 				<key>url</key>
