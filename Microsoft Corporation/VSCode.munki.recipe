@@ -36,7 +36,7 @@ Seamlessly switch between working with agents and hands-on coding, all within th
 			<key>developer</key>
 			<string>Microsoft Corporation</string>
 			<key>display_name</key>
-			<string>Code</string>
+			<string>Visual Studio Code</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>supported_architectures</key>
