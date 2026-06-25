@@ -46,7 +46,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%NAME%.dmg</string>
+				<string>%NAME%-%SUPPORTED_ARCH%.dmg</string>
 				<key>url</key>
 				<string>%DOWNLOADURL%</string>
 			</dict>
