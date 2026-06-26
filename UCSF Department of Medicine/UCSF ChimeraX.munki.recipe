@@ -16,6 +16,14 @@
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
 		<string>UCSF ChimeraX</string>
+		<key>SUPPORTED_ARCH</key>
+		<string>arm64</string>
+		<!-- alt x86_64 -->
+		<key>DOWNLOAD_ARCH</key>
+		<string>macosx</string>
+		<!-- alt x64 -->
+		<!-- https://www.cgl.ucsf.edu/chimerax/cgi-bin/secure/chimerax-get.py?file=1.12/mac_arm64/ChimeraX-1.12.dmg -->
+		<!-- https://www.cgl.ucsf.edu/chimerax/cgi-bin/secure/chimerax-get.py?file=1.12/macosx/ChimeraX-1.12.dmg -->
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -23,13 +31,17 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>Interactive visualization and analysis of molecular structures and related data.</string>
+			<string>ChimeraX is the state-of-the-art visualization program from the Resource for Biocomputing, Visualization, and Informatics at UC San Francisco. It is free for academic, government, nonprofit, and personal use; commercial users, please see commercial licensing. Please cite ChimeraX in publications.</string>
 			<key>developer</key>
 			<string>UCSF Department of Medicine</string>
 			<key>display_name</key>
 			<string>UCSF ChimeraX</string>
 			<key>name</key>
 			<string>%NAME%</string>
+			<key>supported_architectures</key>
+			<array>
+				<string>%SUPPORTED_ARCH%</string>
+			</array>
 			<key>unattended_install</key>
 			<true/>
 		</dict>

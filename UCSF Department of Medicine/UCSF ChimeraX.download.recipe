@@ -14,6 +14,14 @@
 		<string>ChimeraX-1.9</string>
 		<key>NAME</key>
 		<string>UCSF ChimeraX</string>
+		<key>SUPPORTED_ARCH</key>
+		<string>arm64</string>
+		<!-- alt x86_64 -->
+		<key>DOWNLOAD_ARCH</key>
+		<string>macosx</string>
+		<!-- alt x64 -->
+		<!-- https://www.cgl.ucsf.edu/chimerax/cgi-bin/secure/chimerax-get.py?file=1.12/mac_arm64/ChimeraX-1.12.dmg -->
+		<!-- https://www.cgl.ucsf.edu/chimerax/cgi-bin/secure/chimerax-get.py?file=1.12/macosx/ChimeraX-1.12.dmg -->
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>
@@ -22,10 +30,36 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>request_headers</key>
+    			<dict>
+					<key>User-Agent</key>
+        			<string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36</string>
+				</dict>
+				<key>re_pattern</key>
+				<string>Release ([0-9.]*)</string>
+				<key>result_output_var_name</key>
+				<string>VERSION</string>
+				<key>curl_opts</key>
+					<array>
+						<string>--location</string>
+					</array>
+				<key>url</key>
+				<string>https://www.rbvi.ucsf.edu/trac/ChimeraX/wiki/ChangeLog</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
 				<key>filename</key>
 				<string>%NAME%.dmg</string>
+				<key>curl_opts</key>
+					<array>
+						<string>--location</string>
+					</array>
 				<key>url</key>
-				<string>https://www.cgl.ucsf.edu/chimerax/cgi-bin/secure/chimerax-get.py?ident=OHeQer2WQ6dn%2BOJyoHhc5P5ir0FTRtf91RNw1wj5hfcjquvKdQ%3D%3D&amp;file=1.9%2Fmac_universal%2FChimeraX-1.9.dmg&amp;choice=Notified</string>
+				<string>https://www.cgl.ucsf.edu/chimerax/cgi-bin/secure/chimerax-get.py?file=%VERSION%/%DOWNLOAD_ARCH%/ChimeraX-%VERSION%.dmg</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
