@@ -53,7 +53,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%NAME%.dmg</string>
+				<string>%NAME%-%SUPPORTED_ARCH%-%VERSION%.dmg</string>
 				<key>curl_opts</key>
 					<array>
 						<string>--location</string>
