@@ -20,7 +20,7 @@
 		<string>arm64</string>
 		<!-- alt x86_64 -->
 		<key>DOWNLOAD_ARCH</key>
-		<string>macosx</string>
+		<string>mac_arm64</string>
 		<!-- alt x64 -->
 		<!-- https://www.cgl.ucsf.edu/chimerax/cgi-bin/secure/chimerax-get.py?file=1.12/mac_arm64/ChimeraX-1.12.dmg -->
 		<!-- https://www.cgl.ucsf.edu/chimerax/cgi-bin/secure/chimerax-get.py?file=1.12/macosx/ChimeraX-1.12.dmg -->
