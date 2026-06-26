@@ -11,7 +11,7 @@
 	<key>Input</key>
 	<dict>
 		<key>APP_FILENAME</key>
-		<string>ChimeraX-1.9</string>
+		<string>ChimeraX</string>
 		<key>NAME</key>
 		<string>UCSF ChimeraX</string>
 	</dict>
@@ -32,7 +32,7 @@
 						<key>destination_path</key>
 						<string>/Applications</string>
 						<key>source_item</key>
-						<string>ChimeraX-1.9.app</string>
+						<string>ChimeraX.app</string>
 					</dict>
 				</array>
 			</dict>

@@ -11,7 +11,7 @@
 	<key>Input</key>
 	<dict>
 		<key>APP_FILENAME</key>
-		<string>ChimeraX-1.9</string>
+		<string>ChimeraX</string>
 		<key>NAME</key>
 		<string>UCSF ChimeraX</string>
 	</dict>

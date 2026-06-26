@@ -11,7 +11,7 @@
 	<key>Input</key>
 	<dict>
 		<key>APP_FILENAME</key>
-		<string>ChimeraX-1.9</string>
+		<string>ChimeraX</string>
 		<key>NAME</key>
 		<string>UCSF ChimeraX</string>
 		<key>SUPPORTED_ARCH</key>
@@ -105,7 +105,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>input_plist_path</key>
-				<string>%pathname%/ChimeraX-1.9.app/Contents/Info.plist</string>
+				<string>%pathname%/ChimeraX-%VERSION%.app/Contents/Info.plist</string>
 				<key>plist_version_key</key>
 				<string>CFBundleShortVersionString</string>
 			</dict>
