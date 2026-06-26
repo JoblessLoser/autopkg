@@ -52,14 +52,36 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>curl_opts</key>
+				<array>
+					<string>-X</string>
+            		<string>POST</string>
+					<string>-F</string>
+            		<string>file=%VERSION%/%DOWNLOAD_ARCH%/ChimeraX-%VERSION%.dmg</string>
+					<string>-F</string>
+            		<string>choice=Accept</string>
+				</array>
+				<key>re_pattern</key>
+				<string>a href="(.*)"</string>
+				<key>result_output_var_name</key>
+				<string>DOWNLOAD_URL</string>
+				<key>url</key>
+				<string>https://www.cgl.ucsf.edu/chimerax/cgi-bin/secure/chimerax-get.py</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
 				<key>filename</key>
 				<string>%NAME%-%SUPPORTED_ARCH%-%VERSION%.dmg</string>
 				<key>curl_opts</key>
-					<array>
-						<string>--location</string>
-					</array>
+				<array>
+					<string>--location</string>
+            	</array>
 				<key>url</key>
-				<string>https://www.cgl.ucsf.edu/chimerax/cgi-bin/secure/chimerax-get.py?file=%VERSION%/%DOWNLOAD_ARCH%/ChimeraX-%VERSION%.dmg</string>
+				<string>https://www.cgl.ucsf.edu%DOWNLOAD_URL%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
