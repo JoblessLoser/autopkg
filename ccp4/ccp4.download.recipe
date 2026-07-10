@@ -99,17 +99,6 @@
 			<key>Processor</key>
 			<string>Unarchiver</string>
 		</dict>
-		<dict>
-            <key>Processor</key>
-            <string>PathDeleter</string>
-            <key>Arguments</key>
-            <dict>
-                <key>path_list</key>
-                <array>
-            		<string>%RECIPE_CACHE_DIR%/%SUPPORTED_ARCH%/pkgroot/Applications/</string>
-				</array>
-            </dict>
-        </dict>
         <dict>
             <key>Processor</key>
             <string>Copier</string>
