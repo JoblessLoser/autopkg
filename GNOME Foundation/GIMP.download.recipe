@@ -23,6 +23,19 @@
 			<key>Arguments</key>
 			<dict>
 				<key>re_pattern</key>
+				<string>gimp-([0-9]+\.[0-9]+)\.[0-9]+-%SUPPORTED_ARCH%\.dmg</string>
+				<key>result_output_var_name</key>
+				<string>MAJOR_VERSION</string>
+				<key>url</key>
+				<string>https://www.gimp.org/downloads/</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>re_pattern</key>
 				<string>gimp-[0-9]+\.[0-9]+\.[0-9]+-%SUPPORTED_ARCH%\.dmg</string>
 				<key>result_output_var_name</key>
 				<string>DOWNLOAD_URL</string>
@@ -38,7 +51,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>https://download.gimp.org/gimp/v3.0/macos/%DOWNLOAD_URL%</string>
+				<string>https://download.gimp.org/gimp/v%MAJOR_VERSION%/macos/%DOWNLOAD_URL%</string>
 			</dict>
 		</dict>
 		<dict>
@@ -51,7 +64,7 @@
 				<key>input_path</key>
 				<string>%pathname%/GIMP.app</string>
 				<key>requirement</key>
-				<string>identifier "org.gimp.gimp-3.0" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = T25BQ8HSJF</string>
+				<string>identifier "org.gimp.gimp-%MAJOR_VERSION%" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = T25BQ8HSJF</string>
 			</dict>
 			<key>Processor</key>
 			<string>CodeSignatureVerifier</string>
