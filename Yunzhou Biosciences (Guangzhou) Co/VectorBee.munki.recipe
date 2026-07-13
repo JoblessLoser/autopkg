@@ -12,6 +12,12 @@
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
+		<key>SUPPORTED_ARCH</key>
+		<string>arm64</string>
+		<!-- alt x86_64 -->
+		<key>DOWNLOAD_ARCH</key>
+		<string>mac-arm64</string>
+		<!-- alt mac -->
 		<key>NAME</key>
 		<string>VectorBee</string>
 		<key>pkginfo</key>
@@ -30,6 +36,10 @@
 			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<true/>
+			<key>supported_architectures</key>
+			<array>
+				<string>%SUPPORTED_ARCH%</string>
+			</array>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>

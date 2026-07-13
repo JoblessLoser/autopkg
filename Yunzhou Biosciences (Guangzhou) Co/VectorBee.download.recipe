@@ -12,6 +12,12 @@
 	<dict>
 		<key>NAME</key>
 		<string>VectorBee</string>
+		<key>SUPPORTED_ARCH</key>
+		<string>arm64</string>
+		<!-- alt x86_64 -->
+		<key>DOWNLOAD_ARCH</key>
+		<string>mac-arm64</string>
+		<!-- alt mac -->
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>
@@ -20,10 +26,23 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>filename</key>
-				<string>%NAME%.dmg</string>
+				<key>re_pattern</key>
+				<string> "mac-arm64": "[^"]*"</string>
+				<key>result_output_var_name</key>
+				<string>DOWNLOADURL</string>
 				<key>url</key>
-				<string>blob:https://www.vectorbee.com/e47b00bc-0941-4606-9560-31eacba7790d</string>
+				<string>https://www.vectorbee.com/api/v1/get-download-list/</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%-%SUPPORTED_ARCH%.dmg</string>
+				<key>url</key>
+				<string>%DOWNLOADURL%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
