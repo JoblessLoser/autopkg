@@ -27,7 +27,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>re_pattern</key>
-				<string> "%DOWNLOAD_ARCH%":"[^"]*"</string>
+				<string>"%DOWNLOAD_ARCH%":"([^"]*)"</string>
 				<key>result_output_var_name</key>
 				<string>DOWNLOADURL</string>
 				<key>url</key>
