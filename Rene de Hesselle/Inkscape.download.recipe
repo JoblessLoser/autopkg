@@ -26,6 +26,11 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>request_headers</key>
+    			<dict>
+					<key>User-Agent</key>
+        			<string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36</string>
+				</dict>
 				<key>re_pattern</key>
 				<string>href="(\/release\/[0-9.]+\/mac-os-x\/)"</string>
 				<key>result_output_var_name</key>
@@ -43,6 +48,12 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>request_headers</key>
+    			<dict>
+					<key>User-Agent</key>
+        			<string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36</string>
+				</dict>
+				
 				<key>re_pattern</key>
 				<string>href="(\/release\/[^\/]+\/mac-os-x\/dmg%DOWNLOAD_ARCH%\/dl\/)"</string>
 				<key>result_output_var_name</key>
@@ -60,6 +71,12 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>request_headers</key>
+    			<dict>
+					<key>User-Agent</key>
+        			<string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36</string>
+				</dict>
+				
 				<key>re_pattern</key>
 				<string>href="([^"]+)SUPPORTED_ARCH\.dmg"</string>
 				<key>result_output_var_name</key>
@@ -77,6 +94,11 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>request_headers</key>
+    			<dict>
+					<key>User-Agent</key>
+        			<string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36</string>
+				</dict>
 				<key>filename</key>
 				<string>%NAME%.dmg</string>
 				<key>url</key>
