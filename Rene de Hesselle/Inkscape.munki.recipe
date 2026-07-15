@@ -14,6 +14,12 @@
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
 		<string>Inkscape</string>
+		<key>SUPPORTED_ARCH</key>
+		<string>arm64</string>
+		<!-- alt x86_64 -->
+		<key>DOWNLOAD_ARCH</key>
+		<string>-arm64</string>
+		<!-- alt "" -->
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -30,6 +36,10 @@
 			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<true/>
+			<key>supported_architectures</key>
+			<array>
+				<string>%SUPPORTED_ARCH%</string>
+			</array>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>

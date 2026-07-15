@@ -12,6 +12,12 @@
 	<dict>
 		<key>NAME</key>
 		<string>Inkscape</string>
+		<key>SUPPORTED_ARCH</key>
+		<string>arm64</string>
+		<!-- alt x86_64 -->
+		<key>DOWNLOAD_ARCH</key>
+		<string>-arm64</string>
+		<!-- alt "" -->
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>
@@ -20,10 +26,61 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>re_pattern</key>
+				<string>href="(\/release\/[0-9.]+\/mac-os-x\/)"</string>
+				<key>result_output_var_name</key>
+				<string>DOWNLOAD_PAGE</string>
+				<key>curl_opts</key>
+				<array>
+					<string>--location</string>
+				</array>
+				<key>url</key>
+				<string>https://inkscape.org/release/</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>re_pattern</key>
+				<string>href="(\/release\/[^\/]+\/mac-os-x\/dmg%DOWNLOAD_ARCH%\/dl\/)"</string>
+				<key>result_output_var_name</key>
+				<string>DOWNLOAD_URL</string>
+				<key>curl_opts</key>
+				<array>
+					<string>--location</string>
+				</array>
+				<key>url</key>
+				<string>https://inkscape.org%DOWNLOAD_PAGE%</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>re_pattern</key>
+				<string>href="([^"]+)SUPPORTED_ARCH\.dmg"</string>
+				<key>result_output_var_name</key>
+				<string>DOWNLOAD_LINK</string>
+				<key>curl_opts</key>
+				<array>
+					<string>--location</string>
+				</array>
+				<key>url</key>
+				<string>https://inkscape.org%DOWNLOAD_URL%</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
 				<key>filename</key>
 				<string>%NAME%.dmg</string>
 				<key>url</key>
-				<string>https://media.inkscape.org/dl/resources/file/Inkscape-1.4.230579_arm64.dmg</string>
+				<string>https://media.inkscape.org%DOWNLOAD_LINK%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
