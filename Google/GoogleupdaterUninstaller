@@ -1,0 +1,22 @@
+#!/bin/bash
+
+osascript -e 'tell application "Google drive" to quit'
+sudo pkill "Google Drive"
+
+if [[ -d "/Library/Application Support/Google/GoogleUpdater/" ]]
+ then
+   echo "GoogleUpdater needs uninstalling"
+   sudo rm -rf "/Library/Application Support/Google/GoogleUpdater/"
+fi
+
+sudo rm -rf "/Applications/Google Drive.app"
+sudo rm -rf "/Applications/Google Docs.app"
+sudo rm -rf "/Applications/Google Sheets.app"
+sudo rm -rf "/Applications/Google Slides.app"
+
+
+pkgutil --forget com.google.drivefs.shortcuts
+pkgutil --forget com.google.drivefs.arm64
+pkgutil --forget com.google.drivefs.x86_64
+
+exit 0

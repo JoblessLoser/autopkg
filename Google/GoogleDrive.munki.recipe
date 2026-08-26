@@ -5,26 +5,25 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v2.5.0 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of GoogleUpdater and imports it into Munki.</string>
+	<string>Downloads the latest version of GoogleDrive and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.JoblessLoser.munki.GoogleUpdater</string>
+	<string>com.github.JoblessLoser.munki.GoogleDrive</string>
 	<key>Input</key>
 	<dict>
+		<key>SUPPORTED_ARCH</key>
+		<string>arm64</string>
+		<!-- alt x86_64 -->
 		<key>version</key>
 		<string>%version%</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>GoogleUpdater</string>
+		<string>GoogleDrive</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>blocking_applications</key>
 			<array>
-				<string>Google Sheets.app</string>
-				<string>GoogleUpdater.app</string>
-				<string>Google Docs.app</string>
-				<string>Google Slides.app</string>
-				<string>GoogleSoftwareUpdateAgent.app</string>
+				<string>GoogleDrive.app</string>
 			</array>
 			<key>catalogs</key>
 			<array>
@@ -42,30 +41,16 @@ Choose folders on your computer to sync with Google Drive or backup to Google Ph
 			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<true/>
-			<key>installcheck_script</key>
-	<string>#!/bin/bash
-
-ApplicationName="Google Drive"
-TargetVersion="%version%"
-
-echo "Checking for version $TargetVersion of $ApplicationName"
-
-
-if [[ -d "/Library/Application Support/Google/GoogleUpdater/$TargetVersion" ]]
- then
-   echo "$ApplicationName is installed"
-   exit 1
-fi
-
-echo "Version $TargetVersion of $ApplicationName not found"
-exit 0
-</string>
+			<key>supported_architectures</key>
+			<array>
+				<string>%SUPPORTED_ARCH%</string>
+			</array>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>com.github.JoblessLoser.download.GoogleUpdater</string>
+	<string>com.github.JoblessLoser.download.GoogleDrive</string>
 	<key>Process</key>
 	<array>
 		<dict>

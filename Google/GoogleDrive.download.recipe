@@ -5,13 +5,16 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v2.5.0 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of GoogleUpdater.</string>
+	<string>Downloads the latest version of GoogleDrive.</string>
 	<key>Identifier</key>
-	<string>com.github.JoblessLoser.download.GoogleUpdater</string>
+	<string>com.github.JoblessLoser.download.GoogleDrive</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>GoogleUpdater</string>
+		<string>GoogleDrive</string>
+		<key>SUPPORTED_ARCH</key>
+		<string>arm64</string>
+		<!-- alt x86_64 -->
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>
@@ -54,24 +57,13 @@
 				<string>%RECIPE_CACHE_DIR%/unpack</string>
 				<key>flat_pkg_path</key>
 				<string>%pathname%/GoogleDrive.pkg</string>
+				<key>skip_payload</key>
+				<true/>
 				<key>purge_destination</key>
 				<true/>
 			</dict>
 			<key>Processor</key>
 			<string>FlatPkgUnpacker</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/payload</string>
-				<key>pkg_payload_path</key>
-				<string>%RECIPE_CACHE_DIR%/unpack/GoogleUpdater.pkg/Payload</string>
-				<key>purge_destination</key>
-				<true/>
-			</dict>
-			<key>Processor</key>
-			<string>PkgPayloadUnpacker</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
