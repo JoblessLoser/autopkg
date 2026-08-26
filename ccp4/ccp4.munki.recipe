@@ -61,6 +61,11 @@ Our policy is that we will not acknowledge receipt of academic licences unless s
 			<string></string>
 			<key>display_name</key>
 			<string>ccp4</string>
+			<key>postinstall_script</key>
+    		<string>#!/bin/bash
+
+sudo /Applications/ccp4-9/BINARY.setup --run-from-script
+			</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>supported_architectures</key>
