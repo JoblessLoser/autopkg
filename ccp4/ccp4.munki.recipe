@@ -66,6 +66,11 @@ Our policy is that we will not acknowledge receipt of academic licences unless s
 
 sudo /Applications/ccp4-9/BINARY.setup --run-from-script
 			</string>
+			<key>postuninstall_script</key>
+    		<string>#!/bin/bash
+
+sudo rm -r /Applications/ccp4-9
+			</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>supported_architectures</key>
