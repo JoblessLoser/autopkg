@@ -12,6 +12,9 @@
 	<dict>
 		<key>NAME</key>
 		<string>PyMOL</string>
+		<key>SUPPORTED_ARCH</key>
+		<string>arm64</string>
+		<!-- alt x86_64 -->
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>
@@ -20,10 +23,27 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>re_pattern</key>
+				<string>href="(https:\/\/storage.googleapis.com\/pymol-storage\/installers\/PyMOL-[0-9._]*-MacOS-%SUPPORTED_ARCH%-py[0-9]*\.dmg)</string>
+				<key>result_output_var_name</key>
+				<string>DOWNLOADURL</string>
+				<key>curl_opts</key>
+					<array>
+						<string>--location</string>
+					</array>
+				<key>url</key>
+				<string>https://storage.googleapis.com/pymol-storage/installers/index.html</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
 				<key>filename</key>
 				<string>%NAME%.dmg</string>
 				<key>url</key>
-				<string>https://storage.googleapis.com/pymol-storage/installers/PyMOL-3.1.9_0-MacOS-arm64-py310.dmg</string>
+				<string>%DOWNLOADURL%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
