@@ -24,7 +24,7 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string> </string>
+			<string>PyMOL is a user-sponsored molecular visualization system on an open-source foundation, maintained and distributed by Schrödinger.</string>
 			<key>developer</key>
 			<string>Schrodinger</string>
 			<key>display_name</key>
